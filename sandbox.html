@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div id="current-minute"></div>
+    <button onclick="displayCurrentMinute()">Get Current Minute</button>
+
+    <div id="element-to-hide">This element will disappear when the button is clicked.</div>
+    <button id="toggle-button">Toggle Element Visibility</button>
+
+    <script>
+        function displayCurrentMinute() {
+            const now = new Date();
+            const currentMinute = now.getMinutes();
+            const div = document.getElementById("current-minute");
+            div.innerText = `Current minute: ${currentMinute}`;
+        }
+    </script>
+
+    <script>
+        function hideElement(id) {
+            const element = document.getElementById(id);
+            element.style.display = 'none';
+        }
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script>
+        $(function() {
+          $("#navbar").load("navbar.html");
+        });
+    </script>
+    <section>
+        <h1>Parse Array Example</h1>
+        <form>
+          <label for="input-array">Enter a comma-separated list of values:</label>
+          <input type="text" id="input-array">
+          <button type="button" id="parse-button">Parse Array</button>
+        </form>
+    </section>
+    <section id="output">
+        <!-- Output array will be displayed here -->
+    </section>
+    <script>
+        function parseArray() {
+          // Get the input array from the text input
+          const inputArray = document.getElementById('input-array').value.split(',');
+          return inputArray.sort().reverse();
+        }
+        // Attach an event listener to the parse button
+        document.getElementById('parse-button').addEventListener('click', function() {
+          // Parse the array and get the sorted result
+          const sortedArray = parseArray();
+    
+          // Output the sorted array to the output section
+          const outputSection = document.getElementById('output');
+          outputSection.innerHTML = '<p>Sorted array: ' + sortedArray.join(', ') + '</p>';
+        });
+    </script>
+</body>
+</html>
+  

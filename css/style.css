@@ -1,3 +1,47 @@
 body {
     background-image: url('../hero-bg.jpg');
 }
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    margin-bottom: 20px;
+  }
+  
+  .row img {
+    margin-bottom: 10px;
+  }
+
+  .page-content p::first-letter {
+    color: #35c8f9;              /* Change the color of the first letter */
+    font-family: 'Georgia', serif; /* Change the font-family of the first letter */
+    font-size: 3em;               /* Increase the font size of the first letter */
+    line-height: 1;              /* Adjust the line-height of the first letter */
+    padding-top: 4px;            /* Add spacing above the first letter */
+    padding-right: 8px;          /* Add spacing to the right of the first letter */
+    padding-left: 2px;           /* Add spacing to the left of the first letter */
+    float: left;                 /* Float the first letter to the left */
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  .transparent-footer {
+    background-color: transparent;
+  }
+  #map {
+    height: 400px;
+    width: 100%;
+  }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>RSTI Texts</title>
+    <script src="/js/loadTextList.js"></script>
+</head>
+<body onload="loadXML()">
+    <div id="navbar"></div> 
+    <div class="container mt-3"> 
+        <div id="title"></div>
+        
+        <div class="container"> 
+            <h3 id = 'projectTitle'></h3>
+            <h4 id="setTitle"></h4>
+            <div id="setDescription"></div>
+            <table class="table table-striped order-table" id="ochreTable">
+                <thead class="thead-dark" id="cohreTableColumns">
+                    <tr>
+                        <th style="text-align: left; width: 30%">Name</th>
+                        <th style="text-align: left; width: 30%">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="ochreTableBody">
+
+                </tbody>
+            </table>
+        </div>
+        <a id ='license'></a>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $(function() {
+        $("#navbar").load("navbar.html");
+        $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+</html>
